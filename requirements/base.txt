@@ -2,6 +2,8 @@
 
 django-model-utils==1.4.0
 
+-e git+https://github.com/deschler/django-modeltranslation.git@master#egg=django-modeltranslation
+
 South==0.7.6
 
 Pillow==2.1.0
