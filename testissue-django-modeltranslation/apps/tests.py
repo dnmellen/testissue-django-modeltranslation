@@ -26,7 +26,6 @@ class BasicTest(CategoryCreatedMixin, TestCase):
         category.name = "Category one english"
         category.save()
         trans_real.deactivate()
-
         trans_real.activate('es')
         category.name = "Categoria uno"
         category.save()

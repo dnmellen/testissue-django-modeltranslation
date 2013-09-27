@@ -9,7 +9,6 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 sys.path.insert(0, root('apps'))
 
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -51,7 +50,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
@@ -117,6 +116,7 @@ WSGI_APPLICATION = 'testissue-django-modeltranslation.wsgi.application'
 TEMPLATE_DIRS = (
     root('templates'),
 )
+MODELTRANSLATION_TRANSLATION_REGISTRY = "testissue-django-modeltranslation.apps.translation"
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -134,7 +134,6 @@ PROJECT_APPS = ('testissue-django-modeltranslation.apps',)
 
 INSTALLED_APPS += PROJECT_APPS
 
-MODELTRANSLATION_TRANSLATION_REGISTRY = "testissue-django-modeltranslation.apps.translation"
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
